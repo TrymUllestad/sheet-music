@@ -9,8 +9,22 @@ lead = {
     \key bes \major
     \time 4/4
     
-    c''4
+    % Intro
+    <g' bes d>16 <g bes d>8 <g bes d>16 <g bes d>8 <g bes d> <des' f>4 <b ees> |
+    <g bes d>16 <g bes d>8 <g bes d>16 <g bes d>8 <g bes d> r <a ees'>4. |
+    <bes bes'>1 |
+    d,8. g16~ g8 bes a2 |
+    f8 f f16 e d8 f8 f f16 e d8 |
+    <bes' bes'> <g g'> r4 r2 |
+
+    % Enter cowboy man
+    bes8 g r d f g bes a |
+    g4 d8 f bes a g f |
+    <ees g>1
   
+  }
+  \addlyrics{
+    So -- ra
   }
 }
 
@@ -19,24 +33,42 @@ rythm = {
     \key bes \major
     \clef "bass"
 
-    c4
+    % Intro
+    g16 g8 g16 g8 g ees4 d |
+    g16 g8 g16 g8 g r <d d,>4. |
+    <bes bes'>8 <g g'> r <g g'> <f f'> <g g'> r <g g'> |
+    <bes bes'> <g g'> <des' des'> <c c'>~ <c c'> <bes bes'> <f f'> <fis fis'> |
+    <g g'> <a a'> <bes bes'> <g g'> g' <g g,> <f f,> <fis fis,> |
+    <bes bes,>8 <g g,> r4 <d d,>8 <d d,> r4 |
+
+    % Enter cowboy man
+    g,8 g, g' g, d' g g,16 d' g g, |
+    g'4 g,8 d' f g d g, |
+    g4 g g' g,8 d' 
   }
 }
 
 \score {
-\new PianoStaff<<
-  \new Staff {
-    \new Voice{
-      \lead
+  \new PianoStaff<<
+    \new Staff {
+      \new Voice{
+        \lead
+      }
     }
-  }
 
-  \new Staff{
-    \new Voice{
-      \rythm
+    \new Staff{
+      \new Voice{
+        \rythm
+      }
     }
+  >>
+
+\layout {
+  \context{
+    \Score 
+    \override SpacingSpanner #'common-shortest-duration = #(ly:make-moment 1 12)
   }
->>
 }
-\layout {}
 \midi {}
+
+}
