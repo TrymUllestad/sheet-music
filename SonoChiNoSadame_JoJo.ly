@@ -16,15 +16,23 @@ lead = {
     d,8. g16~ g8 bes a2 |
     f8 f f16 e d8 f8 f f16 e d8 |
     <bes' bes'> <g g'> r4 r2 |
+    }
 
     % Enter cowboy man
-    bes8 g r d f g bes a |
+    \relative {
+
+    bes'8 g r d f g bes a |
     g4 d8 f bes a g f |
-    <ees g>1
+    <ees g>1 |
+    r2 r4 a8 bes |
+    a g r d f g bes a |
+    g4 d8 f d' c bes a |
+    bes1 |
   
   }
   \addlyrics{
-    So -- ra
+    So -- ra! Ko -- bo -- re -- o -- chi -- ta fu -- ta -- tsu no ho -- shi ga
+    Hi -- ka -- ri to ya -- mi no mi -- na -- mo sui -- ko -- ma -- re -- te -- yu -- ku 
   }
 }
 
@@ -44,7 +52,11 @@ rythm = {
     % Enter cowboy man
     g,8 g, g' g, d' g g,16 d' g g, |
     g'4 g,8 d' f g d g, |
-    g4 g g' g,8 d' 
+    g4 g g' g,8 d' |
+    g,4 g8 d' f g d g, |
+    g' g, g' g, d' g g,16 d' g g, |
+    g'4 g,8 d' f g d g, |
+    ees'4 ees8 bes' ees ees, ees bes'
   }
 }
 
